@@ -5,5 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom events</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>click on any buttons to see changes</h1>
+    </header>
+    <!-- option 1 -->
+    <button onclick="document.body.style.fontSize='3em'">
+      make title large
+    </button>
+
+    <button id="make-blue">Make blue</button>
+    <button onclick="makeYellow()">make yellow</button>
+    <button class="make-green">make green</button>
+    <button id="make-purple">make purple</button>
+  </body>
+  <script src="./events.js"></script>
 </html>
