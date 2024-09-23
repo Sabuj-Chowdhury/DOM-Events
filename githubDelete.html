@@ -9,12 +9,30 @@
     <button><a href="./index.html">Go Back</a></button>
 
     <section>
-      <h1>Delete me</h1>
+      <h1 id="h-text">Delete me</h1>
       <p>if you type other than <em>delete</em> ,delete button will not work</p>
-      <p>under construction</p>
-      <input type="text" placeholder="Please type 'delete'" />
-      <button>delete</button>
+
+      <input id="input-text" type="text" placeholder="Please type 'delete'" />
+      <button id="delete-btn" disabled>delete</button>
     </section>
-    <script></script>
+    <script>
+      document
+        .getElementById("delete-btn")
+        .addEventListener("click", function () {
+          document.getElementById("h-text").style.display = "none";
+        });
+      document
+        .getElementById("input-text")
+        .addEventListener("keyup", function (events) {
+          textValue = events.target.value;
+          if (textValue === "delete") {
+            document.getElementById("delete-btn").removeAttribute("disabled");
+          } else {
+            document
+              .getElementById("delete-btn")
+              .setAttribute("disabled", true);
+          }
+        });
+    </script>
   </body>
 </html>
