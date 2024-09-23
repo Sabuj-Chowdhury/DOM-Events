@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding Comments</title>
+  </head>
+  <body>
+    <button><a href="./index.html">GO Back</a></button>
+    <header style="font-size: larger">
+      <h1>Post anything</h1>
+    </header>
+    <div id="div-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        voluptate earum corporis minima consequuntur fugit mollitia provident
+        neque id nobis, voluptatem eveniet labore illum accusantium maxime
+        suscipit laboriosam deserunt quas.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        voluptate earum corporis minima consequuntur fugit mollitia provident
+        neque id nobis, voluptatem eveniet labore illum accusantium maxime
+        suscipit laboriosam deserunt quas.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        voluptate earum corporis minima consequuntur fugit mollitia provident
+        neque id nobis, voluptatem eveniet labore illum accusantium maxime
+        suscipit laboriosam deserunt quas.
+      </p>
+    </div>
+    <textarea name="" id="text-area"></textarea>
+    <br />
+    <button id="post-btn">Post</button>
+    <script>
+      document
+        .getElementById("post-btn")
+        .addEventListener("click", function () {
+          const textArea = document.getElementById("text-area");
+          const textValue = textArea.value;
+
+          const targetDiv = document.getElementById("div-container");
+
+          const p = document.createElement("p");
+          p.innerText = textValue;
+          targetDiv.appendChild(p);
+          textArea.value = "";
+        });
+    </script>
+  </body>
+</html>
