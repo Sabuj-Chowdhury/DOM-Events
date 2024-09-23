@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom events</title>
   </head>
-  <body>
+  <body id="main-content">
     <header>
       <h1>click on any buttons to see changes</h1>
     </header>
@@ -18,6 +18,12 @@
     <button onclick="makeYellow()">make yellow</button>
     <button class="make-green">make green</button>
     <button id="make-purple">make purple</button>
+
+    <br /><br />
+
+    <p id="p-update">default text</p>
+    <input id="input" type="text" />
+    <button id="update-btn">update</button>
   </body>
   <script src="./events.js"></script>
 </html>

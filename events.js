@@ -22,3 +22,12 @@ const purpleButton = document.getElementById("make-purple");
 purpleButton.onclick = function makePurple() {
   document.body.style.backgroundColor = "purple";
 };
+
+document.getElementById("update-btn").addEventListener("click", function () {
+  const inputText = document.getElementById("input");
+  inputValue = inputText.value;
+
+  const p = document.getElementById("p-update");
+  p.innerText = inputValue;
+  inputText.value = "";
+});
